@@ -24,7 +24,7 @@ if __name__ == '__main__':
         date = datetime.now()
         event_queue.task_done()
         power_df.to_csv("power_log_{}.csv".format(date), index=False)
-        inference_log.to_csv("inference_log_{}.csv".format(date), index=False)
+        inference_log.to_csv("inference_log_{}.csv".format(date), index=False) #for verification purposes, not used 
         logging.info("Power log saved.")
         logging.info("Inference log saved.")
         
