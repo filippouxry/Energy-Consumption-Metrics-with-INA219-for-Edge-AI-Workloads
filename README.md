@@ -6,4 +6,19 @@ Short functionality description:
 added log_event(event) function to push events (inference start/end, lines 184/241) to shared queue with power_monitoring thread
 - power_monitoring.py : initializes INA219 sensor bus for communication via i2c, continuously updates pandas dataframe with measurements along with event tags 
 - controller.py : initializes edge_application and power_monitoring threads, when interrupted saves the power log to .csv 
+- postprocessing_v2.py : reads saved .csv file, computes metrics such as:
+
+Overall Mean Power/Inf  (Watts)
+
+MEAD Power/Inf (Watts)
+
+Stdev Power/Inf (Watts)
+
+Mean Inference Duration (s)
+
+Mean Energy Consumption/Inf (J)
+
+Performance (inferences/s)
+
+Efficiency (Performance per Watt)
 
